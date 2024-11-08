@@ -65,8 +65,9 @@ This variability is expected with a smaller number of repetitions, because any m
 
 Step 4: Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-The answer to this prompt is in the whitby_covid_tracing.py file. The comments explain how my changed affect reproducibility of the script. 
-
+The answer to this prompt is in ln 15 and ln 16 of the whitby_covid_tracing.py file. I have set the random seed to a fixed value with a np.random.seed(42) which will make sure that everytime the script is run, the sequence of numbers np.random generates is the same. 
+The effect on reproducibility is that every run of the script will produce the same output. Without a fixed seed, random selections of infected individuals and traced cases will be different on each run. 
+Using fixed value of 42 because it was Jesus's favourite seed number lol - he had a deeper explanation for it that I don't entirely remember right now (Jesus, the instructor for Production module).
 ```
 
 
